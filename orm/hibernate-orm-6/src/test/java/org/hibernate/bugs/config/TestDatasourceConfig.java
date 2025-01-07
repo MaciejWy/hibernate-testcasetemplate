@@ -18,24 +18,11 @@ public class TestDatasourceConfig {
     @Autowired
     private Environment env;
 
-//    private final PostgreSQLContainer<?> container = new PostgreSQLContainer<>("postgres:15.2");
-
     public TestDatasourceConfig() {
-//        container.waitingFor(Wait.defaultWaitStrategy());
-//        container.start();
     }
 
     @Bean
     public DataSource dataSource() {
-//        Awaitility.await().atMost(Duration.ofSeconds(60)).until(container::isRunning);
-//
-//        SimpleDriverDataSource dataSourceBuilder = new SimpleDriverDataSource();
-//        dataSourceBuilder.setDriverClass(org.postgresql.Driver.class);
-//        dataSourceBuilder.setUrl(container.getJdbcUrl());
-//        dataSourceBuilder.setUsername(container.getUsername());
-//        dataSourceBuilder.setPassword(container.getPassword());
-//        return dataSourceBuilder;
-
         SimpleDriverDataSource dataSourceBuilder = new SimpleDriverDataSource();
         dataSourceBuilder.setDriverClass(org.h2.Driver.class);
         dataSourceBuilder.setUrl(env.getProperty("spring.datasource.url"));
