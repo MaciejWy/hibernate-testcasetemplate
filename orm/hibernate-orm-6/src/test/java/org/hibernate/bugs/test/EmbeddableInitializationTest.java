@@ -34,7 +34,7 @@ public class EmbeddableInitializationTest {
     private TransactionTemplate transactionTemplate;
 
     @Test
-    public void repositoryTest() {
+    public void HHH19021RepositoryTest() {
         // given
         List<String> authors = List.of("John Doe", "Shakespeare");
         String isbn = "2348723847823483";
@@ -49,7 +49,7 @@ public class EmbeddableInitializationTest {
     }
 
     @Test
-    public void entityManagerTest() {
+    public void HHH19021EntityManagerTest() {
         // given
         List<String> authors = List.of("John Doe", "Shakespeare");
         String isbn = "2348723847823484";
